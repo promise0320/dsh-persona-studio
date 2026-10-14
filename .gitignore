@@ -1,0 +1,18 @@
+# 依赖与构建产物
+node_modules/
+dist/
+*.tsbuildinfo
+
+# 本插件的运行时产物（都不该进仓库）
+*.corrupt-*
+*.tmp-*
+.probe/
+
+# 本地工作文档（个人向：重启步骤、上架待办等），不进公开仓库
+*.local.md
+
+# 系统 / 编辑器杂物
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

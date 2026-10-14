@@ -1,0 +1,7 @@
+# dsh-persona-studio 的 bundle patch 层。
+#
+# DSH 启动时按 bundle 层栈叠加各插件的 patch，本文件把插件插进 profile 的组合树。
+# `name` 必须与安装的包名一致，否则 loader 只 warn 然后跳过这一行。
+- insert:
+    - id: dsh-persona-studio
+      name: dsh-persona-studio

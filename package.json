@@ -1,0 +1,42 @@
+{
+  "name": "dsh-persona-studio",
+  "version": "0.1.0",
+  "description": "人格编译工坊：在 DSH 里编译 LLM 的人格（对话风格 / 创作习惯 / 反馈方式 / 语气语调），调用内置与自定义人格模板，并根据历史对话与潜在需求自动归纳人格、形成倾向；附带主界面悬浮面板与 /persona 命令。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "persona",
+    "prompt",
+    "ui"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./spec": "./lib/spec.mjs",
+    "./compile": "./lib/compile.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/api.mjs && node --check assets/panel.js && node --check assets/bootstrap.js",
+    "test": "node test/smoke.mjs && node test/apply.mjs && node test/panel.mjs"
+  },
+  "license": "MIT"
+}

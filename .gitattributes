@@ -1,0 +1,20 @@
+# 统一换行符，避免 Windows 上 checkout 后被改成 CRLF：
+#   · *.sh 必须是 LF，否则 Linux/macOS 上执行会报 "$'\r': command not found"
+#   · *.ps1 也用 LF，PowerShell 两者都能读，统一更省事
+#   · 二进制资源不做转换
+* text=auto
+
+*.sh   text eol=lf
+*.ps1  text eol=lf
+*.mjs  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.md   text eol=lf
+*.css  text eol=lf
+
+*.png  binary
+*.jpg  binary
+*.gif  binary
+*.wav  binary
+*.ico  binary
