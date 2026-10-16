@@ -12,6 +12,10 @@
   ],
   "type": "module",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/promise0320/dsh-persona-studio.git"
+  },
   "exports": {
     ".": "./lib/index.js",
     "./spec": "./lib/spec.mjs",
@@ -24,6 +28,7 @@
     "cordis.patch.yml",
     "scripts",
     "README.md",
+    "使用说明.md",
     "LICENSE"
   ],
   "dsh": {
